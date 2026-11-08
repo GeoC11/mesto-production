@@ -1,33 +1,52 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mesto — интерактивная галерея мест">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mesto — интерактивная галерея мест" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-XAXpw0q2.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CfMvYlpf.css">
+    <script type="module" crossorigin src="./assets/index-PSE-XHdC.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BuDOAam3.css">
   </head>
   <body class="page">
     <div class="page__content">
       <header class="header">
-        <a class="logo" href="#" aria-label="Mesto — на главную"><span class="logo__name">Mesto</span><span class="logo__country">Russia</span></a>
+        <a class="logo" href="#" aria-label="Mesto — на главную"
+          ><span class="logo__name">Mesto</span
+          ><span class="logo__country">Russia</span></a
+        >
       </header>
 
       <main class="content">
         <section class="profile" aria-label="Профиль пользователя">
-          <button class="profile__avatar-button" type="button" aria-label="Изменить аватар">
-            <img class="profile__avatar" src="" alt="Аватар пользователя">
+          <button
+            class="profile__avatar-button"
+            type="button"
+            aria-label="Изменить аватар"
+          >
+            <img class="profile__avatar" src="" alt="Аватар пользователя" />
             <span class="profile__avatar-edit" aria-hidden="true">✎</span>
           </button>
           <div class="profile__info">
             <div class="profile__title-row">
               <h1 class="profile__title"></h1>
-              <button class="profile__edit-button" type="button" aria-label="Редактировать профиль">✎</button>
+              <button
+                class="profile__edit-button"
+                type="button"
+                aria-label="Редактировать профиль"
+              >
+                ✎
+              </button>
             </div>
             <p class="profile__description"></p>
           </div>
-          <button class="profile__add-button" type="button" aria-label="Добавить карточку">+</button>
+          <button
+            class="profile__add-button"
+            type="button"
+            aria-label="Добавить карточку"
+          >
+            +
+          </button>
         </section>
 
         <section class="places" aria-label="Карточки мест">
@@ -36,16 +55,46 @@
         </section>
       </main>
 
-      <footer class="footer"><p class="footer__copyright">© 2026 Mesto Russia</p></footer>
+      <footer class="footer">
+        <p class="footer__copyright">© 2026 Mesto Russia</p>
+      </footer>
     </div>
 
     <div class="popup popup_type_edit" aria-hidden="true">
       <div class="popup__container">
-        <button class="popup__close" type="button" aria-label="Закрыть">×</button>
+        <button class="popup__close" type="button" aria-label="Закрыть">
+          ×
+        </button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form" name="edit-profile" novalidate>
-          <label class="popup__field"><input class="popup__input" name="name" type="text" minlength="2" maxlength="40" placeholder="Имя" required><span class="popup__input-error"></span></label>
-          <label class="popup__field"><input class="popup__input" name="about" type="text" minlength="2" maxlength="200" placeholder="О себе" required><span class="popup__input-error"></span></label>
+          <label class="popup__field"
+            ><input
+              class="popup__input"
+              id="profile-name-input"
+              name="name"
+              type="text"
+              minlength="2"
+              maxlength="40"
+              placeholder="Имя"
+              required /><span
+              class="popup__input-error"
+              id="profile-name-input-error"
+            ></span
+          ></label>
+          <label class="popup__field"
+            ><input
+              class="popup__input"
+              id="profile-about-input"
+              name="about"
+              type="text"
+              minlength="2"
+              maxlength="200"
+              placeholder="О себе"
+              required /><span
+              class="popup__input-error"
+              id="profile-about-input-error"
+            ></span
+          ></label>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
       </div>
@@ -53,11 +102,37 @@
 
     <div class="popup popup_type_new-card" aria-hidden="true">
       <div class="popup__container">
-        <button class="popup__close" type="button" aria-label="Закрыть">×</button>
+        <button class="popup__close" type="button" aria-label="Закрыть">
+          ×
+        </button>
         <h2 class="popup__title">Новое место</h2>
         <form class="popup__form" name="new-place" novalidate>
-          <label class="popup__field"><input class="popup__input" name="place-name" type="text" minlength="2" maxlength="30" placeholder="Название" required><span class="popup__input-error"></span></label>
-          <label class="popup__field"><input class="popup__input" name="link" type="url" placeholder="Ссылка на картинку" required><span class="popup__input-error"></span></label>
+          <label class="popup__field"
+            ><input
+              class="popup__input"
+              id="place-name-input"
+              name="place-name"
+              type="text"
+              minlength="2"
+              maxlength="30"
+              placeholder="Название"
+              required /><span
+              class="popup__input-error"
+              id="place-name-input-error"
+            ></span
+          ></label>
+          <label class="popup__field"
+            ><input
+              class="popup__input"
+              id="place-link-input"
+              name="link"
+              type="url"
+              placeholder="Ссылка на картинку"
+              required /><span
+              class="popup__input-error"
+              id="place-link-input-error"
+            ></span
+          ></label>
           <button class="popup__button" type="submit">Создать</button>
         </form>
       </div>
@@ -65,10 +140,23 @@
 
     <div class="popup popup_type_avatar" aria-hidden="true">
       <div class="popup__container">
-        <button class="popup__close" type="button" aria-label="Закрыть">×</button>
+        <button class="popup__close" type="button" aria-label="Закрыть">
+          ×
+        </button>
         <h2 class="popup__title">Обновить аватар</h2>
         <form class="popup__form" name="avatar" novalidate>
-          <label class="popup__field"><input class="popup__input" name="avatar" type="url" placeholder="Ссылка на изображение" required><span class="popup__input-error"></span></label>
+          <label class="popup__field"
+            ><input
+              class="popup__input"
+              id="avatar-link-input"
+              name="avatar"
+              type="url"
+              placeholder="Ссылка на изображение"
+              required /><span
+              class="popup__input-error"
+              id="avatar-link-input-error"
+            ></span
+          ></label>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
       </div>
@@ -76,7 +164,9 @@
 
     <div class="popup popup_type_delete" aria-hidden="true">
       <div class="popup__container popup__container_type_confirm">
-        <button class="popup__close" type="button" aria-label="Закрыть">×</button>
+        <button class="popup__close" type="button" aria-label="Закрыть">
+          ×
+        </button>
         <h2 class="popup__title">Вы уверены?</h2>
         <form class="popup__form" name="delete-card">
           <button class="popup__button" type="submit">Да</button>
@@ -86,16 +176,26 @@
 
     <div class="popup popup_type_image" aria-hidden="true">
       <figure class="popup__figure">
-        <button class="popup__close popup__close_type_image" type="button" aria-label="Закрыть">×</button>
-        <img class="popup__image" src="" alt="">
+        <button
+          class="popup__close popup__close_type_image"
+          type="button"
+          aria-label="Закрыть"
+        >
+          ×
+        </button>
+        <img class="popup__image" src="" alt="" />
         <figcaption class="popup__caption"></figcaption>
       </figure>
     </div>
 
     <div class="popup popup_type_info" aria-hidden="true">
       <div class="popup__container popup__container_type_info">
-        <button class="popup__close" type="button" aria-label="Закрыть">×</button>
-        <h2 class="popup__title popup__title_type_info">Информация о карточке</h2>
+        <button class="popup__close" type="button" aria-label="Закрыть">
+          ×
+        </button>
+        <h2 class="popup__title popup__title_type_info">
+          Информация о карточке
+        </h2>
         <dl class="popup-info__list"></dl>
         <h3 class="popup-info__subtitle">Лайкнули:</h3>
         <ul class="popup-info__users"></ul>
@@ -105,14 +205,28 @@
     <template id="card-template">
       <li class="card">
         <div class="card__image-wrapper">
-          <img class="card__image" src="" alt="">
-          <button class="card__control-button card__control-button_type_info" type="button" aria-label="Открыть информацию о карточке">i</button>
-          <button class="card__delete-button" type="button" aria-label="Удалить карточку"></button>
+          <img class="card__image" src="" alt="" />
+          <button
+            class="card__control-button card__control-button_type_info"
+            type="button"
+            aria-label="Открыть информацию о карточке"
+          >
+            i
+          </button>
+          <button
+            class="card__delete-button"
+            type="button"
+            aria-label="Удалить карточку"
+          ></button>
         </div>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <div class="card__like-area">
-            <button class="card__like-button" type="button" aria-label="Поставить лайк"></button>
+            <button
+              class="card__like-button"
+              type="button"
+              aria-label="Поставить лайк"
+            ></button>
             <span class="card__like-count">0</span>
           </div>
         </div>
@@ -120,7 +234,10 @@
     </template>
 
     <template id="popup-info-definition-template">
-      <div class="popup-info__row"><dt class="popup-info__term"></dt><dd class="popup-info__definition"></dd></div>
+      <div class="popup-info__row">
+        <dt class="popup-info__term"></dt>
+        <dd class="popup-info__definition"></dd>
+      </div>
     </template>
 
     <template id="popup-info-user-preview-template">
